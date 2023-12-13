@@ -1,0 +1,249 @@
+/*tags CSS*/
+a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+body {
+    background-color: rgb(44, 42, 42);
+    margin: 0px;
+}
+
+h1 {
+    font-size: 3.5em;
+    color: whitesmoke;
+    text-align: center;
+}
+
+h2 {
+    color: whitesmoke;
+    font-weight: lighter;
+    margin-bottom: 0px;
+}
+/*End of tags CSS*/
+
+/*Navbar CSS*/
+.myNav {
+    position: sticky;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: rgb(20, 19, 19);
+    color: whitesmoke;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.myNav a:hover {
+    text-decoration: underline;
+}
+    /*left half*/
+    .navLeft {
+        width: 65%;
+        display: flex;
+        flex-direction: column;
+        padding: 20px 0px 20px 20px
+    }
+
+    .navLeft div:first-child {
+        font-size: 2.5em;
+    }
+
+    .navLeft > div {
+        margin: 2px 0px;
+    }
+    /*end of left half*/
+    /*right half*/
+    .navRight {
+        width: 35%;
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .navRight li {
+        font-size: 1.6em;
+        margin: auto;        
+    }
+
+    .navRight li:hover {
+        color: grey;
+    }
+    /*end of right half*/
+/*End of navbar CSS*/
+
+/*about me CSS*/
+#about-me {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.about-me-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    margin: 10px 60px
+}
+
+.about-me-img {
+    height: 550px;
+    width: 425px;
+    border: 2px solid rgb(20, 19, 19);
+    border-radius: 210px;
+}
+
+.vl {
+    border-left: 2px solid rgb(20, 19, 19);
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto 40px
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 1.28em;
+}
+
+.description p {
+    color: rgb(128, 128, 128);
+}
+
+.description ul {
+    color: rgb(128, 128, 128);
+    font-size: 1.25em;
+}
+/*end of about me CSS*/
+
+/*certifications CSS*/
+#certifications {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.certifications-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 30px;
+}
+
+.certification-card {
+    display: flex;
+    flex-direction: column;
+}
+
+#certifications embed {
+    height: 400px;
+    width: 450px;
+    margin: 0px auto;
+}
+
+.cert-description {
+    width: 450px;
+    color: rgb(128, 128, 128);
+}
+
+.cert-description > li:last-child {
+   color: rgb(190, 187, 187);
+}
+
+.cert-description a {
+    color: rgb(190, 187, 187);
+}
+/*end of certifications CSS*/
+
+/*skills CSS*/
+#skills {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.skills-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 60px;
+}
+
+.skill-card {
+    color: whitesmoke;
+    background-color: rgb(20, 19, 19);
+    text-align: center;
+    width: 200px;
+    height: 150px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-top: 10px;
+}
+
+#cpp-icon { /*used for cpp icon because fontawesome didnt have any to choose from*/
+    margin: 0px auto;
+}
+/*end of skills CSS*/
+
+/*projects CSS*/
+#projects {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#projects h2 {
+    font-size: 2.2em;
+    font-weight: lighter;
+    color: whitesmoke;
+    text-align: left;
+    margin: 20px 80px ;
+}
+
+.project-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    margin: 0px 50px;
+}
+
+.project-img {
+    width: 50%;
+}
+
+.project-container img {
+    height: 400px;
+    width: 100%;
+    border: 2px solid rgb(20, 19, 19);
+    border-radius: 20px;
+}
+
+.project-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 50%;
+    list-style: circle;
+    color: rgb(128, 128, 128);
+    font-size: 1.2em;
+}
+
+.project-description li:first-child{
+    list-style:disc;
+    font-size: 1.7em;
+    color: rgb(190, 187, 187); 
+}
+
+#projects hr {
+    border: 1px solid rgb(20, 19, 19);
+    width: 70%;
+    margin: 40px auto;
+}
+/*end of projects CSS*/

@@ -1,0 +1,582 @@
+/*CSS for standard tags*/
+* {
+    box-sizing: border-box;
+    font-family: "Baskerville Old Face";
+}
+
+html {
+    /*firefox scrollbar*/
+    scrollbar-width: thin;
+    scrollbar-color: rgb(112, 26, 26) black;
+}
+
+/*scrollbar for other browsers*/
+html::-webkit-scrollbar {
+    width: .9vw; /*view width units for scaling size*/
+}
+
+html::-webkit-scrollbar-thumb {
+    background-color: rgb(112, 26, 26);
+}
+html::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(129, 48, 48);
+}
+
+html::-webkit-scrollbar-track {
+    border-radius: 25px;
+}
+
+html::-webkit-scrollbar-track-piece {
+    background-color: black;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+h1 {
+    text-align: center;
+    font-size: 55px;
+    margin: 10px auto;
+    width: 50%;
+}
+
+h2 {
+    border: 2px solid;
+    text-align: center;
+    font-size: 30px;
+    background-color: #ffd1b3;
+}
+
+hr {
+    display: block;
+    margin: 20px auto 0px;
+    height: 2px;
+    background-color: black;
+    border: hidden;
+    width: 50%;
+}
+
+figure {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 500px;
+}
+
+figcaption {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+select {
+    background-color: #ffd1b3;
+}
+/*End of CSS for standard tags*/
+
+/*CSS for nav elements*/
+.navContainer {
+    background-color: black;
+    border-right: 1px solid black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    /*justify-content:space-evenly;*/
+}
+
+#logo {
+    border: 8px solid;
+    border-color: rgb(112, 26, 26);
+    border-radius: 50px;
+    margin: 20px auto;
+}
+
+.navMenu {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0px; /*should always be 0 to take full 20% of screen's width*/
+    width: 100%;
+    text-align: center;
+}
+
+ul.navMenu > li {
+    display: inline-block;
+    height: 60px;
+    width: 100%;
+}
+
+.navButton {
+    background-color: rgb(112, 26, 26);
+    border: hidden;
+    border-bottom: 1px solid black;
+    height: 60px;
+    width: 100%;
+    font-size: 1.6em;
+    padding: 0px;
+    cursor: pointer;
+}
+
+.navButton:hover {
+    background-color: #dab297;
+}
+
+#map {
+    border: 5px solid rgb(112, 26, 26);
+    border-radius: 20px;
+    margin: 50px auto 20px;
+}
+
+.footerMenu {
+    position: absolute;
+    bottom: 0;
+    padding: 0;
+    height: auto;
+    width: 100%;
+    background-color: rgb(112, 26, 26);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+ul.footerMenu > li {
+    list-style-type: none;
+    width: 100%;
+    font-size: .96em;
+}
+/*End of CSS for nav elements*/
+
+/*Start of CSS for main content*/
+#content {
+    background: linear-gradient(
+        to bottom,
+        rgb(250,217,97), 
+        rgb(247,107,28) /*#ff8533 or rgb(247,107,28)*/
+    );
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: auto; /*set to auto for gradiant color*/
+    width: 80%;
+}
+
+/*CSS for total cart*/
+#cart {
+    margin-top: 30px;
+    margin-right: 30px;
+    position: fixed;
+    right: 2em;
+    top: 0;
+    height: 80px;
+    width: 80px;
+    border-radius: 45px;
+    background-color: #ffd1b3;
+    cursor: pointer;
+}
+
+#cart:hover {
+    background-color: #dab297;
+}
+
+.cartSidebar {
+    position: fixed;
+    height: 70%;
+    width: 20%;
+    top: 8vw;
+    right: 0;
+    border: 2px solid black;
+    background-color: rgb(112, 26, 26);
+    border-radius: 15px 0px 0px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    visibility: hidden;
+    animation-duration: 1000ms;
+    animation-fill-mode: forwards;
+}
+
+.showCart {
+    visibility: visible !important;
+}
+
+@keyframes slideLeft {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 20%;
+    }
+}
+
+@keyframes slideRight {
+    0% {
+        width: 20%;
+    }
+    100% {
+        width: 0;
+    }
+}
+
+#itemsList {
+    overflow-y: auto;
+    height: 60%;
+    /*firefox*/
+    scrollbar-width: thin;
+    scrollbar-color: rgb(250,217,97) black;
+}
+
+#itemsList::-webkit-scrollbar {
+    width: .5vw;
+}
+
+#itemsList::-webkit-scrollbar-thumb {
+    background-color: rgb(250,217,97);
+    border-radius: 25px;
+}
+
+#itemsList::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(203, 174, 67);
+}
+
+#itemsList::-webkit-scrollbar-track {
+    border-radius: 25px;
+}
+
+#itemsList::-webkit-scrollbar-track-piece {
+    background-color: black;
+    border-radius: 25px;
+}
+
+#itemsList > div {
+    margin: 0px auto 0px 30px;
+    font-size: 1.1em;
+}
+
+#itemsList button {
+    background-color: rgb(112, 26, 26);
+    border: none;
+    cursor: pointer;
+}
+
+#displaySubTotal {
+    text-align: center;
+    font-size: 1.4em;
+    border-top: 1px solid black;
+}
+
+#checkout {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 15%;
+    background-color: #dab297;
+    font-size: 2em;
+    border: none;
+    border-top: 1px solid black;
+    cursor: pointer;
+    border-radius: 0px 0px 0px 15px;
+}
+
+    /*CSS for menu elements*/
+    #menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .menuChangeContainer {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;    
+    }
+
+    #menuCategory {
+        height: 60px;
+        width: 200px;
+        padding: 10px;
+        margin-top: 25px;
+        margin-bottom: 10px;
+        border-radius: 35px;
+    }
+
+    .menuButton {
+        margin: 35px 10px 10px 10px;
+        border: 3px solid;
+        border-radius: 25px;
+        height: 40px;
+        background-color: #ffd1b3;
+        cursor: pointer;
+    }
+
+    .menuButton:hover {
+        background-color: #dab297;
+    }
+
+    .indexIndicator {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .dot {
+        height: 25px;
+        width: 25px;
+        background-color: #ffd1b3;
+        border-radius: 50%;
+        display: inline-block;
+        border: solid 1px black;
+    }
+
+    .indexCurrent {
+        background-color: #dab297;
+    }
+
+    .menuRow {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin: 10px 0px;
+    }
+
+    .menuItem {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 10px 40px;
+    }
+
+    .menuItem > p {
+        margin: 0px auto 5px;
+        font-weight: bold;
+        font-size: 25px;
+        width: 250px;
+    }
+
+    .menuItem > img {
+        border: 6px inset rgb(112, 26, 26);
+        border-radius: 60px;
+        display: block;
+        margin: auto;
+        padding: auto;
+        width: 275px;
+        height: 250px;
+    }
+
+    .menuItem > p.description {
+        margin: 5px auto;
+        font-weight: lighter;
+        font-size: 20px;
+    }
+
+    .cartButton {
+        background-color: #ffd1b3;
+        border-radius: 25px;
+        cursor: pointer;
+    }
+
+    .cartButton:hover {
+        background-color: #dab297;
+    }
+
+    .cookiesMenu {
+        animation-duration: 1000ms;
+        animation-fill-mode: forwards;
+    }
+
+    .browniesMenu {
+        animation-duration: 1000ms;
+        animation-fill-mode: forwards;
+    }
+
+    .drinksMenu {
+        animation-duration: 1000ms;
+        animation-fill-mode: forwards;
+    }
+
+    .invisible {
+        display: none;
+    }
+    
+
+    @keyframes fade-in { /*goes visible*/
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+        /*for reference >> https://www.youtube.com/watch?v=gGJTBpDwsSM  */
+        /*from video >> https://jsfiddle.net/2zLv4hfy/1/  */
+    }
+
+    @keyframes fade-out { /*goes invisible*/
+        100% {
+            opacity: 0;
+        }
+        0% {
+            opacity: 1;
+        }
+    }
+    /*End of CSS for menu elements*/
+
+    /*Start of CSS for gallery elements*/
+    #gallery {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .galleryRow {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin-top: 20px;
+        height: auto;
+    }
+    
+    .vl {
+        border-left: 1px solid black;
+        height: 65%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: auto 0px;
+      }
+
+    .galleryRow > img {
+        height: 400px;
+        width: 400px;
+        border-radius: 45px;
+        box-shadow: 10px 5px 5px rgb(112, 26, 26);
+    }
+    /*End of CSS of gallery elements*/
+
+    /*Start of CSS for about us*/
+    #aboutUs {
+        margin:  20px 0px;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+    }
+
+    #ownerImage {
+        height: 350px;
+        width: 350px;
+        float: right;
+        border-radius: 300px;
+        box-shadow: 10px 5px 5px rgb(112, 26, 26);
+    }
+
+    .aboutUsP {
+        width: 65%;
+        font-size: 1.7em;
+        margin: 20px;
+        text-align: center;
+        }
+    /*End of CSS for about us*/
+    
+    /*Start of CSS for news*/
+    #news {
+        margin:  20px auto;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .newsP {
+        width: 65%;
+        font-size: 2.0em;
+        margin: 20px auto;
+        text-align: center;
+        font-weight: bolder;
+    }
+
+    .articleView {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .articleButton {
+        margin: auto 10px;
+        border: 3px solid;
+        border-radius: 25px;
+        height: 40px;
+        background-color: #ffd1b3;
+        cursor: pointer;
+    }
+
+    .articleButton:hover {
+        background-color: #dab297;
+    }
+
+    .articleContainer {
+        margin: 0px 20px;
+        width: 67%;
+        height: auto;
+        overflow-x: scroll;
+        display: flex;
+        flex-direction: row;
+        /*scroll-snap-type: x mandatory;*/ /*belongs in container*/
+        /*firefox scrollbar*/
+        scrollbar-width: thin;
+        scrollbar-color: rgb(112, 26, 26) black;
+    }
+
+    /*scrollbar for other browsers*/
+    .articleContainer::-webkit-scrollbar {
+        width: 2vw; /*view width units for scaling size*/
+    }
+
+    .articleContainer::-webkit-scrollbar-thumb {
+        background-color: rgb(112, 26, 26);
+        border-radius: 25px;
+    }
+    .articleContainer::-webkit-scrollbar-thumb:hover {
+        background-color: rgb(129, 48, 48);
+    }
+
+    .articleContainer::-webkit-scrollbar-track {
+        background-color: black;
+        border-radius: 25px;
+    }
+
+    .articleContainer > article {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        scroll-snap-align: start; /*belongs to objects in container*/
+    }
+
+    article > a {
+        margin: 10px 20px 0px 20px;
+    }
+
+    a > img {
+        height: 400px;
+        width: 300px;
+        border: 8px;
+        border-bottom: 0px;
+        border-style: solid;
+        border-color: rgb(112, 26, 26);
+        border-radius: 20px 20px 0px 0px;
+    }
+
+    a > p {
+        background-color: #dab297;
+        margin: -5px 20px 10px 20px;
+        width: 300px;
+        border: 8px;
+        border-top: 0px;
+        border-style: solid;
+        border-color: rgb(112, 26, 26);
+        border-radius: 0px 0px 20px 20px;
+    }
+    /*End of CSS for news*/

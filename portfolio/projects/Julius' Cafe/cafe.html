@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, inital-scale=1">
+    <title>Café Joyorra</title>
+	<link rel="stylesheet" type="text/css" href="cafeStyles.css">
+</head>
+<body>
+    <!--nav = 20% of screen-->
+    <nav class="navContainer"> 
+        <img id="logo" src="cafeImages/cafeLogo2.PNG" alt="Business' logo" width="215" height="175">
+        <ul class="navMenu">
+            <li><a href="#gotoMenu"><button class="navButton"><i class="fa-solid fa-utensils" style="color: #000000;"></i> Menu</button></a></li>
+            <li><a href="#gotoGallery"><button class="navButton"><i class="fa-solid fa-camera" style="color: #000000;"></i> Gallery</button></a></li>
+            <li><a href="#gotoAboutUs"><button class="navButton"><i class="fa-solid fa-users" style="color: #000000;"></i> About Us</button></a></li>
+            <li><a href="#gotoNews"><button class="navButton"><i class="fa-solid fa-comments" style="color: #000000;"></i> News</button></a></li>
+            <!--<li><a href="#gotoOrderOnline"><button class="navButton"><i class="fa-solid fa-cookie-bite" style="color: #000000;"></i> Order Online</button></a></li>-->
+        </ul>
+        <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.634549853865!2d-73.73898302340712!3d40.72606083675385!2m3!1f
+        0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2622e2213eb51%3A0x43c6fff9c1d428e7!2s92-05%20Winchester%20Blvd%2C%20Queens%2C%20NY%
+        2011428!5e0!3m2!1sen!2sus!4v1701105873711!5m2!1sen!2sus" width="250" height="200" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <footer>
+            <ul class="footerMenu">
+                <li><b>Address:</b> 92-05 Winchester Blvd., Queens Village, NY</li>
+                <li><b>Hours:</b> Monday-Saturday 6AM-11PM, Sunday 9AM-3PM</li>
+                <li><b>Call:</b> 718-721-3472</li>
+                <li><b>Socials:</b> <a href="https://twitter.com/home" target="_blank"><i class="fa-brands fa-twitter fa-sm" style="color: #000000;"></i> </a>
+                    <a href="https://instagram.com" target="_blank"><i class="fa-brands fa-instagram fa-sm" style="color: #000000;"></i> </a>
+                    <a href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook fa-sm" style="color: #000000;"></i></a>
+                </li>
+            </ul>
+        </footer>
+    </nav>
+    <!--end of nav = 20% of screen-->
+
+    <!--main/dynamic content = 80% of screen-->
+    <div id="content"> 
+        <hr>
+        <h1 id="gotoMenu">Menu</h1>
+        <hr>
+
+        <!--cart occupies left side of screen, goes invisible and visible-->
+        <button id="cart" onclick="cartVisible()"><i class="fa-solid fa-cart-shopping fa-2xl" style="color: #000000;"></i></button>
+        <div class="cartSidebar" id="cartSidebar">
+            <div id="itemsList">
+                <!--will be filled by menu cart buttons (do not remove this comment)-->
+                <div>Your cart is empty... Change that!</div>
+            </div>
+            <div id="displaySubTotal">$0.00</div>
+            <button onclick="checkout()" id="checkout">Checkout!</button>
+        </div>
+        <!--end of cart-->
+
+        <!--start of space for changeable menu-->
+        <div id="menu">
+            <div class="menuChangeContainer">
+                <button onclick="changeMenuLeft()" class="menuButton" id="btnLeft">
+                    <i class="fa-solid fa-arrow-left fa-2xl" style="color: #000000;"></i>
+                </button>
+                <h2 id="menuCategory"></h2>
+                <button onclick="changeMenuRight()" class="menuButton" id="btnRight">
+                    <i class="fa-solid fa-arrow-right fa-2xl" style="color: #000000;"></i>
+                </button>
+            </div> 
+            <div class="indexIndicator">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+            <!--start of cookies menu (default menu)-->
+            <div class="cookiesMenu">
+                <div class="menuRow">
+                    <div class="menuItem">
+                        <p>Chocolate Chip Cookies</p>
+                        <img src="cafeImages/cookies/chocolateChipCookie.png" alt="Chocolate Chip Cookie">
+                        <p class="description">
+                            <label>#</label>
+                            <select>
+                                <option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option>
+                            </select>
+                            <span type="number">$11.99</span>
+                            <button onclick="addItem(id)" class="cartButton" id="cart1"><i class="fa-solid fa-cart-shopping" style="color: #000000;"></i></button>
+                        </p>
+                    </div>
+                    <div class="menuItem">
+                        <p>Macadamia Nut Cookies</p>
+                        <img src="cafeImages/cookies/macadamiaNutCookie.png" alt="Macadamia Nut Cookie">
+                        <p class="description">
+                            <label>#</label>
+                            <select>
+                                <option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option>
+                            </select>
+                            <span type="number">$10.99</span>
+                            <button onclick="addItem(id)" class="cartButton" id="cart2"><i class="fa-solid fa-cart-shopping" style="color: #000000;"></i></button>
+                        </p>
+                    </div>
+                    <div class="menuItem">
+                        <p>Snickerdoodles</p>
+                        <img src="cafeImages/cookies/snickerdoodle.png" alt="Snickerdoodles">
+                        <p class="description">
+                            <label>#</label>
+                            <select>
+                                <option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option>
+                            </select>
+                            <span type="number">$8.99</span>
+                            <button onclick="addItem(id)" class="cartButton" id="cart3"><i class="fa-solid fa-cart-shopping" style="color: #000000;"></i></button>
+                        </p>
+                    </div>
+                </div>
+                <div class="menuRow">
+                    <div class="menuItem">
+                        <p>Peanut Butter Cookies</p>
+                        <img src="cafeImages/cookies/peanutButterCookie.png" alt="Peanut Butter Cookies">
+                        <p class="description">
+                            <label>#</label>
+                            <select>
+                                <option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option>
+                            </select>
+                            <span type="number">$9.99</span>
+                            <button onclick="addItem(id)" class="cartButton" id="cart4"><i class="fa-solid fa-cart-shopping" style="color: #000000;"></i></button>
+                        </p>
+                    </div>
+                    <div class="menuItem">
+                        <p>Sugar Cookies</p>
+                        <img src="cafeImages/cookies/sugarCookie.png" alt="Sugar Cookies">
+                        <p class="description">
+                            <label>#</label>
+                            <select>
+                                <option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option>
+                            </select>
+                            <span type="number">$7.99</span>
+                            <button onclick="addItem(id)" class="cartButton" id="cart5"><i class="fa-solid fa-cart-shopping" style="color: #000000;"></i></button>
+                        </p>
+                    </div>
+                    <div class="menuItem">
+                        <p>Kiss Cookies</p>
+                        <img src="cafeImages/cookies/kissCookie.png" alt="Kiss Cookies">
+                        <p class="description"><label>#</label>
+                            <select>
+                                <option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option>
+                            </select>
+                            <span type="number">$12.99</span>
+                            <button onclick="addItem(id)" class="cartButton" id="cart6"><i class="fa-solid fa-cart-shopping" style="color: #000000;"></i></button></p>
+                    </div>
+                </div>
+            </div>
+            <!--end of cookies menu, start of brownies menu-->
+            <div class="browniesMenu invisible">
+                <div class="menuRow">
+                    <div class="menuItem">
+                        <p>Chocolate Fudge</p>
+                        <img src="cafeImages/brownies/chocolateFudgeBrownie.png" alt="Chocolate Fudge Brownie">
+                        <p class="description">
+                            <label>#</label>
+                            <select>
+                                <option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option>
+                            </select>
+                            <span type="number">$8.99</span>
+                            <button onclick="addItem(id)" class="cartButton" id="cart7"><i class="fa-solid fa-cart-shopping" style="color: #000000;"></i></button>
+                        </p>
+                    </div>
+                    <div class="menuItem">
+                        <p>Fudge Walnut</p>
+                        <img src="cafeImages/brownies/fudgeWalnutBrownies.png" alt="Fudge Walnut Brownies">
+                        <p class="description">
+                            <label>#</label>
+                            <select>
+                                <option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option>
+                            </select>
+                            <span type="number">$9.99</span>
+                            <button onclick="addItem(id)" class="cartButton" id="cart8"><i class="fa-solid fa-cart-shopping" style="color: #000000;"></i></button>
+                        </p>
+                    </div>
+                    <div class="menuItem">
+                        <p>Peanut Butter Fudge</p>
+                        <img src="cafeImages/brownies/peanutButterFudgeBrownies.png" alt="Peanut Butter Fudge Brownies">
+                        <p class="description">
+                            <label>#</label>
+                            <select>
+                                <option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option>
+                            </select>
+                            <span type="number">$10.99</span>
+                            <button onclick="addItem(id)" class="cartButton" id="cart9"><i class="fa-solid fa-cart-shopping" style="color: #000000;"></i></button>
+                        </p>
+                    </div>
+                </div>
+                <div class="menuRow">
+                    <div class="menuItem">
+                        <p>Caramel Fudge</p>
+                        <img src="cafeImages/brownies/caramelFudgeBrownies.png" alt="Caramel Fudge Brownies">
+                        <p class="description"><label>#</label>
+                            <select>
+                                <option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option>
+                            </select>
+                            <span type="number">$10.99</span>
+                            <button onclick="addItem(id)" class="cartButton" id="cart10"><i class="fa-solid fa-cart-shopping" style="color: #000000;"></i></button></p>
+                    </div>
+                    <div class="menuItem">
+                        <p>Red Velvet Fudge</p>
+                        <img src="cafeImages/brownies/redVelvetFudgeBrownies.png" alt="Red Velvet Fudge Brownies">
+                        <p class="description">
+                            <label>#</label>
+                            <select>
+                                <option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option>
+                            </select>
+                            <span type="number">$10.99</span>
+                            <button onclick="addItem(id)" class="cartButton" id="cart11"><i class="fa-solid fa-cart-shopping" style="color: #000000;"></i></button>
+                        </p>
+                    </div>
+                    <div class="menuItem">
+                        <p>Hot'n Cold Delight</p>
+                        <img src="cafeImages/brownies/hot'nColdBrownie.png" alt="Chocolate Fudge Brownie with Ice Cream">
+                        <p class="description">
+                            <label>#</label>
+                            <select>
+                                <option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option>
+                            </select>
+                            <span type="number">$12.99</span>
+                            <button onclick="addItem(id)" class="cartButton" id="cart12"><i class="fa-solid fa-cart-shopping" style="color: #000000;"></i></button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!--end of brownies menu, start of drinks menu-->
+            <div class="drinksMenu invisible">
+                <div class="menuRow">
+                    <div class="menuItem">
+                        <p>Coffee</p>
+                        <img src="cafeImages/drinks/coffee.png" alt="Coffee">
+                        <p class="description">
+                            <label>#</label>
+                            <select>
+                                <option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option>
+                            </select>
+                            <span type="number">$2.99</span>
+                            <button onclick="addItem(id)" class="cartButton" id="cart13"><i class="fa-solid fa-cart-shopping" style="color: #000000;"></i></button>
+                        </p>
+                    </div>
+                    <div class="menuItem">
+                        <p>Latte</p>
+                        <img src="cafeImages/drinks/latte.png" alt="Latte">
+                        <p class="description">
+                            <label>#</label>
+                            <select>
+                                <option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option>
+                            </select>
+                            <span type="number">$3.99</span>
+                            <button onclick="addItem(id)" class="cartButton" id="cart14"><i class="fa-solid fa-cart-shopping" style="color: #000000;"></i></button>
+                        </p>
+                    </div>
+                    <div class="menuItem">
+                        <p>Macchiato</p>
+                        <img src="cafeImages/drinks/macchiato.png" alt="Macchiato">
+                        <p class="description">
+                            <label>#</label>
+                            <select>
+                                <option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option>
+                            </select>
+                            <span type="number">$3.25</span>
+                            <button onclick="addItem(id)" class="cartButton" id="cart15"><i class="fa-solid fa-cart-shopping" style="color: #000000;"></i></button>
+                        </p>
+                    </div>
+                </div>
+                <div class="menuRow">
+                    <div class="menuItem">
+                        <p>Mocha</p>
+                        <img src="cafeImages/drinks/mocha.png" alt="Mocha">
+                        <p class="description">
+                            <label>#</label>
+                            <select>
+                                <option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option>
+                            </select>
+                            <span type="number">$3.75</span>
+                            <button onclick="addItem(id)" class="cartButton" id="cart16"><i class="fa-solid fa-cart-shopping" style="color: #000000;"></i></button>
+                        </p>
+                    </div>
+                    <div class="menuItem">
+                        <p>Cappuccino</p>
+                        <img src="cafeImages/drinks/cappuccino.png" alt="Banana cake">
+                        <p class="description">
+                            <label>#</label>
+                            <select>
+                                <option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option>
+                            </select>
+                            <span type="number">$3.75</span>
+                            <button onclick="addItem(id)" class="cartButton" id="cart17"><i class="fa-solid fa-cart-shopping" style="color: #000000;"></i></button>
+                        </p>
+                    </div>
+                    <div class="menuItem">
+                        <p>Espresso</p>
+                        <img src="cafeImages/drinks/espresso.png" alt="Reeses cake">
+                        <p class="description">
+                            <label>#</label>
+                            <select>
+                                <option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option>
+                            </select>
+                            <span type="number">$4.50</span>
+                            <button onclick="addItem(id)" class="cartButton" id="cart18"><i class="fa-solid fa-cart-shopping" style="color: #000000;"></i></button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!--end of drinks menu-->
+        </div> 
+        <!--end of space for changeable menu-->
+
+        <hr>
+        <h1 id="gotoGallery">Gallery</h1>
+        <hr>
+
+        <!--start of space for gallery-->
+        <div id="gallery">
+            <figure> <!--use of cafe images as placeholders from google reviews of https://www.scorpionheartsclub.com/-->
+                <div class="galleryRow">
+                    <img src="cafeImages/cafeGallery/scenery1.png" alt="Cafe Entrance">
+                    <span class="vl"></span>
+                    <img src="cafeImages/cafeGallery/scenery2.png" alt="Inside Cafe">
+                    <span class="vl"></span>
+                    <img src="cafeImages/cafeGallery/scenery3.png" alt="Cafe Side Alley">
+                </div>
+                <figcaption>Enjoy the cozy and calm scenery of our cafe - inside or outside! &#9749</figcaption>
+            </figure>
+            <figure>
+                <div class="galleryRow">
+                    <img src="cafeImages/cafeGallery/community1.png" alt="People Eating at a table">
+                    <span class="vl"></span>
+                    <img src="cafeImages/cafeGallery/community2.png" alt="POV photo of person enjoying drinks and wifi">
+                    <span class="vl"></span>
+                    <img src="cafeImages/cafeGallery/community3.png" alt="People both conversing and using wifi">
+                </div>
+                <figcaption>Make our cafe a home for you and other community members! &#128516</figcaption>
+            </figure>
+            <figure>
+                <div class="galleryRow">
+                    <img src="cafeImages/cafeGallery/food1.png" alt="Espresso artwork of two hearts">
+                    <span class="vl"></span>
+                    <img src="cafeImages/cafeGallery/food2.png" alt="Espresso artwork of a heart and black coffee">
+                    <span class="vl"></span>
+                    <img src="cafeImages/cafeGallery/food3.png" alt="Espresso without artwork">
+                </div>
+                <figcaption>Compliment your visit with a drink that'll melt your heart! &#10084</figcaption>
+            </figure>
+            <figure>
+                <div class="galleryRow">
+                    <img src="cafeImages/cafeGallery/staff1.png" alt="Cafe Entrance">
+                    <span class="vl"></span>
+                    <img src="cafeImages/cafeGallery/staff2.png" alt="Inside Cafe">
+                    <span class="vl"></span>
+                    <img src="cafeImages/cafeGallery/staff3.png" alt="Cafe Side Alley">
+                </div>
+                <figcaption>Our staff are always warm and inviting!</figcaption>
+            </figure>
+        </div>
+        <!--end of space for gallery-->
+
+        <hr>
+        <h1 id="gotoAboutUs">About Us</h1>
+        <hr>
+
+        <!--start of about us space-->
+        <div id="aboutUs">
+            <img id="ownerImage" src="cafeImages/profilePic.png">
+            <p class="aboutUsP">Originally coming from a background of finance and nursing, Julius Arroyo decided to enter the culinary world and establish Cafe Joyorra as a place for people kick back, relax, enjoy comforting desserts, and come together as a community. The charm of any good cafe is the combination of quality food and modest, yet cozy decorations. We care for people's comfort and always strive to have everyone at ease! The business' ideology is that if you're not comfortable with your environment, then you can't relax to the fullest. Our goal is to make you feel like you're at home - so much so that you may even be tempted to sleep right in our comforting lounge!</p>
+        </div>
+        <!--end of about us space-->
+
+        <hr>
+        <h1 id="gotoNews">News</h1>
+        <hr>
+        <!--start of news space-->
+        <div id="news">
+            <p class="newsP">Check out these news articles to see the cafe's activity within the community!</p>
+            <div class="articleView">
+                <button type="button" class="articleButton" id="articleBtnLeft"><i class="fa-solid fa-arrow-left fa-2xl" style="color: #000000;"></i></button>
+                <div class="articleContainer" id="articleContainer">
+                    <article>
+                        <a href="https://handletheheat.com/ultimate-brownie-guide/" target="_blank">
+                            <img src="cafeImages/articleImages/articleImage1.png" alt="Image of brownies">
+                            <p>Cafe Joyorra Spills the Beans on How they Make Their Signature Brownies</p>
+                        </a>    
+                    </article>
+                    <article>
+                        <a href="https://wehotimes.com/west-hollywood-honors-organizers-of-jones-hollywood-cafe-fundraiser/" target="_blank">
+                            <img src="cafeImages/articleImages/articleImage2.png" alt="Artwork of hands raising with hearts rested inside the palms of each hand">
+                            <p>Local Cafe Owner Holds Successful Fundraiser for Cancer Research</p>
+                        </a>
+                    </article>
+                    <article>
+                        <a href="https://www.acouplecooks.com/coffee-drinks/" target="_blank">
+                            <img src="cafeImages/articleImages/articleImage3.png" alt="A display of multiple cups all with latte artwork">
+                            <p>The Best Kinds of Drinks Require the Best Techniques: Here's How to Start</p>
+                        </a>
+                    </article>
+                    <article>
+                        <a href="https://www.architecturaldigest.com/gallery/best-modern-coffee-shop-design-slideshow" target="_blank">
+                            <img src="cafeImages/articleImages/articleImage4.png" alt="Interior decorations of cafe">
+                            <p>What makes for Good Design? Ask Cafe Joyorra owner for his Best Advice</p>
+                        </a>
+                    </article>
+                    <article>
+                        <a href="https://www.loyolamedicine.org/about-us/blog/how-much-sugar-is-too-much" target="_blank">
+                            <img src="cafeImages/articleImages/articleImage5.png" alt="Two containers of sugar next to spoonfuls of sugar and sugar cubes - both brown and white">
+                            <p>Striking the Right Amount of Sweetness: Ask Cafe Joyorra Bakers</p>
+                        </a>
+                    </article>
+                    <article>
+                        <a href="https://sallysbakingaddiction.com/soft-thick-snickerdoodles-in-20-minutes/" target="_blank">
+                            <img src="cafeImages/articleImages/articleImage6.png" alt="Snickerdoodle cookies piles on plate with cinnamon sticks">
+                            <p>How Experimenting with New Formulas Lead to Signature Snickerdoodle Cookies</p>
+                        </a>
+                    </article>
+                    <article>
+                        <a href="https://www.myrecipes.com/extracrispy/nap-cafe-nap-york" target="_blank">
+                            <img src="cafeImages/articleImages/articleImage7.png" alt="View of comfortable chair and table adjacent to cafe window">
+                            <p>Cafe Joyorra Owner: "The vibe is just too good. I sleep there all the time!"</p>
+                        </a>
+                    </article>
+                </div>
+                <button type="button" class="articleButton" id="articleBtnRight"><i class="fa-solid fa-arrow-right fa-2xl" style="color: #000000;"></i></button>
+            </div>
+        </div>
+        <!--end of news space-->
+    </div><!--end of main/dynamic content = 80% of screen-->
+     
+    <!--<i class="fa-solid fa-house" style="color: #000000;"></i>-->
+
+    <!-- Scripts at bottom because to target elements HTML needs to load first THEN scripts can target them-->
+    <script src="cafeJS.js"></script>
+    <script src="https://kit.fontawesome.com/df86c35c26.js" crossorigin="anonymous"></script> <!--fontawesome.com for icons-->
+</body>
+</html>
