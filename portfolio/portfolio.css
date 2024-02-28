@@ -24,6 +24,7 @@ h1 {
 h2 {
     color: whitesmoke;
     font-weight: lighter;
+    margin-top: 0px;
     margin-bottom: 0px;
 }
 /*End of tags CSS*/
@@ -168,7 +169,7 @@ h2 {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: auto 40px
+    margin: 0px 40px auto
 }
 
 .description {
@@ -223,10 +224,10 @@ h2 {
     }
 
     .about-me-img {
-        height: 425px;
-        width: 400px;
+        height: 385px;
+        width: 310px;
         border-radius: 100px;
-        margin: -30px auto 0px
+        margin: -30px auto 20px
     }
 
     .vl {
@@ -257,27 +258,73 @@ h2 {
     flex-direction: column;
 }
 
-.certifications-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    margin-bottom: 30px;
-}
-
 .certification-card {
     display: flex;
     flex-direction: column;
+    margin: 0px auto;
+}
+
+#professional-cert {
+    border: 5px rgb(20, 19, 10) solid;
+    height: 500px;
+    width: 700px;
+}
+
+.cert-description {
+    width: 450px;
+    color: rgb(128, 128, 128);
+    margin: 16px auto;
+}
+
+#professional-cert-description {
+    width: 490px; /*width + padding-left must add up to img width*/
+    color: rgb(128, 128, 128);
+    margin: 16px auto;
+    list-style: none; 
+    padding-left: 210px;
+}
+
+#certifications > h2 {
+    text-align: center; 
+    font-size: 2.7em; 
+    color: whitesmoke;
+}
+
+.certifications-slider img {
+    height: 400px;
+    width: 450px; 
+}
+
+.certifications-slider {
+    width: 76%;
+    margin: 30px auto;
+    overflow: auto;
+    display: flex;
+    flex-direction: row;
+}
+
+/*scrollbar for other browsers*/
+.certifications-slider::-webkit-scrollbar {
+    height: .5vw; /*height affects horizontal scrollbars, width affects vertical scrollbars*/
+}
+
+.certifications-slider::-webkit-scrollbar-track {
+    background-color: rgb(20, 19, 10);
+    border-radius: 15px;
+}
+
+.certifications-slider::-webkit-scrollbar-thumb {
+    background-color: rgb(190, 187, 187);
+    border-radius: 15px;
+}
+.certifications-slider::-webkit-scrollbar-thumb:hover {
+    background-color: whitesmoke;
 }
 
 #certifications embed {
     height: 400px;
     width: 450px;
     margin: 0px auto;
-}
-
-.cert-description {
-    width: 450px;
-    color: rgb(128, 128, 128);
 }
 
 .cert-description > li:last-child {
@@ -289,7 +336,16 @@ h2 {
 }
 
 @media (max-width: 1480px) {
-    #certifications embed {
+    #professional-cert {
+        border: 4px rgb(20, 19, 10) solid;
+        height: 400px;
+        width: 550px;
+    }
+    #professional-cert-description {
+        width: 400px;
+        padding-left: 150px;
+    }
+    .certifications-slider img {
         height: 200px;
         width: 250px;
     }
@@ -298,8 +354,28 @@ h2 {
     }
 }
 
+@media (max-width: 1230px) {
+    #professional-cert {
+        height: 350px;
+        width: 500px;
+    }
+    #professional-cert-description {
+        width: 375px;
+        padding-left: 125px;
+    }
+}
+
 @media (max-width: 928px) {
-    #certifications embed {
+    #professional-cert {
+        border: 3px rgb(20, 19, 10) solid;
+        height: 325px;
+        width: 450px;
+    }
+    #professional-cert-description {
+        width: 350px;
+        padding-left: 100px;
+    }
+    .certifications-slider img {
         height: 150px;
         width: 200px;
     }
@@ -309,19 +385,51 @@ h2 {
 }
 
 @media (max-width: 768px) {
-    #certifications embed {
+    #professional-cert {
+        border: 2px rgb(20, 19, 10) solid;
+        height: 300px;
+        width: 400px;
+    }
+    #professional-cert-description {
+        width: 330px;
+        padding-left: 70px;
+    }
+    .certifications-slider img {
         display: none;
     }
     .cert-description {
         width: 150px;
+        list-style: none;
     }
 }
 
 @media (max-width: 600px) {
+    #professional-cert {
+        height: 250px;
+    }
+    #professional-cert-description {
+        width: 335px;
+        padding-left: 65px;
+    }
     .cert-description {
         font-size: .58em;
         margin-top: -10px;
         width: 100px;
+    }
+}
+
+@media (max-width: 500px) {
+    #professional-cert {
+        border: 2px rgb(20, 19, 10) solid;
+        height: 225px;
+        width: 300px;
+    }
+    #professional-cert-description {
+        width: 250px;
+        padding-left: 50px;
+    }
+    #certifications > h2 {
+        font-size: 2em;
     }
 }
 
@@ -333,6 +441,15 @@ h2 {
 }
 
 @media (max-width: 386px) {
+    #professional-cert {
+        border: 2px rgb(20, 19, 10) solid;
+        height: 200px;
+        width: 275px;
+    }
+    #professional-cert-description {
+        width: 235px;
+        padding-left: 40px;
+    }
     .cert-description {
         font-size: .5em;
         width: 60px;
