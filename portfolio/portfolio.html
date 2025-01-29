@@ -1,389 +1,654 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-	    <meta name="viewport" content="width=device-width, inital-scale=1">
-        <title>Nicholas Osorio - Portfolio</title>
-        <link rel="stylesheet" type="text/css" href="portfolio.css">
-        <script src="https://kit.fontawesome.com/df86c35c26.js" crossorigin="anonymous"></script> <!--fontawesome.com for icons-->
-        <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script> <!--iconify icons-->
-    </head>
-    <body id="goto-about-me">
-        <!--full nav bar-->
-        <nav class="myNav">
-            <!--65% of navbar on left-->
-            <div class="navLeft">
-                <div>Nicholas Osorio</div>
-                <div>
-                    <i class="fa-solid fa-phone" style="color: whitesmoke;"></i> 
-                    <span>(1) 347-572-4321</span>
-                </div>
-                <div>
-                    <i class="fa-solid fa-envelope" style="color: whitesmoke;"></i> 
-                    <span>nicholas.osorio98@gmail.com</span>
-                </div>
-                <div>
-                    <a href="https://www.linkedin.com/in/nicholas-osorio-b74888229/" target="_blank">
-                        <i class="fa-brands fa-linkedin" style="color: whitesmoke;"></i> 
-                        <span>Connect with me on LinkedIn!</span> 
-                    </a>
-                </div>
-		        <div>
-                    <a href="https://github.com/gowQC?tab=repositories" target="_blank">
-                        <i class="fa-brands fa-github" style="color: whitesmoke;"></i> 
-                        <span>Check out my GitHub repositories!</span> 
-                    </a>
-                </div>
-            </div>
-            <!--35% of navbar on right-->
-            <ul class="navRight">
-                <li><a href="#goto-about-me">About Me</a></li>
-                <li><a href="#goto-certifications">Certifications</a></li>
-                <li><a href="#goto-skills">Skills</a></li>
-                <li><a href="#goto-projects">Projects</a></li>
-            </ul>
-        </nav>
-        <!--end of full navbar-->
-
-        <!--about me-->
-        <div id="about-me">
-            <h1>About Me</h1>
-            <div class="about-me-container">
-                <img src="myProfilePicture.png" class="about-me-img">
-                <div class="vl"></div>
-                <div class="description">
-                    <h2>Hello! My name is Nicholas Osorio!</h2>
-                    <p>I'm an aspiring web developer that is looking to specialize in front end development, but I am also familiar with back end development! I recently finished acquiring a professional certification for full stack software development offered by IBM, and I am now more excited than ever to pursue my dream of becoming a developer!</p>
-                    <p>Ever since I was enrolled in 2016 at CUNY Queens College, I have been learning about a variety of topics in computer science. It only took
-                        one C++ class for me to fall in love with programming; despite pursuing a major in anthropology back then, I am now aiming to work on more front end projects with the intent to slowly culminate my career into that of a full stack developer. In my free time, I study whatever I can 
-                        to adapt to new technologies and learn more about programming.</p>
-                    <p>I would like to thank you for viewing my portfolio! Projects are still under development - and as a newcomer in the field, things
-                        on this page will take time to develop - but I would still like to display my experience and capabilities at this stage of my career!</p>
-                    <h2 id="goto-certifications">My Education</h2>
-                    <ul>
-                        <li>Bachelor of Arts - BA, Anthropology w/ Minor in Computer Science (Aug 2016 - Jan 2021)</li>
-                        <li>IBM Full Stack Software Developer Specialization (July 2023 - February 2024)</li>
-                    </ul>
-                </div>
-            </div>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, inital-scale=1" />
+    <title>Nicholas Osorio - Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="portfolio.css" />
+    <script
+      src="https://kit.fontawesome.com/df86c35c26.js"
+      crossorigin="anonymous"
+    ></script>
+    <!--fontawesome.com for icons-->
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <!--iconify icons-->
+  </head>
+  <body id="goto-about-me">
+    <!--full nav bar-->
+    <nav class="myNav">
+      <!--65% of navbar on left-->
+      <div class="navLeft">
+        <div>Nicholas Osorio</div>
+        <div>
+          <i class="fa-solid fa-phone" style="color: whitesmoke"></i>
+          <span>(1) 347-572-4321</span>
         </div>
-        <!--end of about me-->
-
-        <!--certifications-->
-        <div id="certifications">
-            <h1>Certifications</h1>
-            <div class="certification-card">
-                <img id="professional-cert" src="certImages/profCert.jpg"/>
-                <ul id="professional-cert-description">  
-                    <li>Name: IBM Full Stack Software Developer</li>
-                    <li>Issuing Organization: IBM</li>
-                    <li>Issue Date: February 25th, 2024</li>
-                    <li>Credential ID: Q2H68P96J33D</li>
-                    <li><a href="https://coursera.org/share/80a4606ec674a3f43e97e37686aa8440" target="_blank">Credential URL</a></li>
-                </ul>
-            </div>
-            <h2>Supporting Certifications</h2>
-            <!--image slider for certificates-->
-            <div class="certifications-slider"> 
-                <div class="certification-card">
-                    <img src="certImages/cert1.jpg"/>
-                    <ul class="cert-description">  
-                        <li>Name: HTML, CSS, and Javascript for Web Developers</li>
-                        <li>Issuing Organization: John Hopkins University</li>
-                        <li>Issue Date: August 2023</li>
-                        <li>Credential ID: JEXWJWAH6L75</li>
-                        <li><a href="https://coursera.org/share/25603bcfb3111c38fe729c6dca3cab00" target="_blank">Credential URL</a></li>
-                    </ul>
-                </div>
-                <div class="certification-card">
-                    <img src="certImages/cert2.jpg"/>
-                    <ul class="cert-description">  
-                        <li>Name: Introduction to Web Development with HTML, CSS, JavaScript</li>
-                        <li>Issuing Organization: IBM</li>
-                        <li>Issue Date: September 2023</li>
-                        <li>Credential ID: UMUVN8WKX4DW</li>
-                        <li><a href="https://coursera.org/share/0508f6fa8a6d9da99e85ff1b48128e7b" target="_blank">Credential URL</a></li>
-                    </ul>
-                </div>
-                <div class="certification-card">
-                    <img src="certImages/cert3.jpg"/>
-                    <ul class="cert-description">  
-                        <li>Name: Getting Started with Git and GitHub</li>
-                        <li>Issuing Organization: IBM</li>
-                        <li>Issue Date: September 2023</li>
-                        <li>Credential ID: CEA3C8RJ29XL</li>
-                        <li><a href="https://coursera.org/share/9c02e62e4fd6924b46618a4133c7dbda" target="_blank">Credential URL</a></li>
-                    </ul>
-                </div>
-                <div class="certification-card">
-                    <img src="certImages/cert4.jpg"/>
-                    <ul class="cert-description">  
-                        <li>Name: Introduction to Cloud Computing</li>
-                        <li>Issuing Organization: IBM</li>
-                        <li>Issue Date: September 2023</li>
-                        <li>Credential ID: JPQ7GESNDTZD</li>
-                        <li><a href="https://coursera.org/share/0004abc395e3dc1f8675e9a7effaccbb" target="_blank">Credential URL</a></li>
-                    </ul>
-                </div>
-                <div class="certification-card">
-                    <img src="certImages/cert5.jpg"/>
-                    <ul class="cert-description">  
-                        <li>Name: Python for Data Science, AI & Development</li>
-                        <li>Issuing Organization: IBM</li>
-                        <li>Issue Date: October 2023</li>
-                        <li>Credential ID: DWSDLYANZWKW</li>
-                        <li><a href="https://coursera.org/share/46993b33420f7728c88d45cd09698c32" target="_blank">Credential URL</a></li>
-                    </ul>
-                </div>
-                <div class="certification-card">
-                    <img src="certImages/cert6.jpg"/>
-                    <ul class="cert-description">  
-                        <li>Name: Developing Front-End Apps with React</li>
-                        <li>Issuing Organization: IBM</li>
-                        <li>Issue Date: November 2023</li>
-                        <li>Credential ID: 6NX73KGBAZUX</li>
-                        <li><a href="https://coursera.org/share/2cd14fddc138e97afd8795061225bff8" target="_blank">Credential URL</a></li>
-                    </ul>
-                </div>
-                <div class="certification-card">
-                    <img src="certImages/cert7.jpg"/>
-                    <ul class="cert-description">  
-                        <li>Name: Developing Back-End Apps with Node.js and Express</li>
-                        <li>Issuing Organization: IBM</li>
-                        <li>Issue Date: January 2024</li>
-                        <li>Credential ID: RA2LEMPMQQ2N</li>
-                        <li><a href="https://www.coursera.org/account/accomplishments/records/RA2LEMPMQQ2N" target="_blank">Credential URL</a></li>
-                    </ul>
-                </div>
-                <div class="certification-card">
-                    <img src="certImages/cert8.jpg"/>
-                    <ul class="cert-description">  
-                        <li>Name: Developing AI Applications with Python and Flask</li>
-                        <li>Issuing Organization: IBM</li>
-                        <li>Issue Date: January 2024</li>
-                        <li>Credential ID: ZL2N3TN2ZWST</li>
-                        <li><a href="https://www.coursera.org/account/accomplishments/records/ZL2N3TN2ZWST" target="_blank">Credential URL</a></li>
-                    </ul>
-                </div>
-                <div class="certification-card">
-                    <img src="certImages/cert9.jpg"/>
-                    <ul class="cert-description">  
-                        <li>Name: Django Application Development with SQL and Databases</li>
-                        <li>Issuing Organization: IBM</li>
-                        <li>Issue Date: January 2024</li>
-                        <li>Credential ID: XZ28B4XC674F</li>
-                        <li><a href="https://www.coursera.org/account/accomplishments/records/XZ28B4XC674F" target="_blank">Credential URL</a></li>
-                    </ul>
-                </div>
-                <div class="certification-card">
-                    <img src="certImages/cert10.jpg"/>
-                    <ul class="cert-description" id="goto-skills">  
-                        <li>Name: Introduction to Containers w/ Docker, Kubernetes & OpenShift</li>
-                        <li>Issuing Organization: IBM</li>
-                        <li>Issue Date: February 2024</li>
-                        <li>Credential ID: A9GH5HQ6LJC6</li>
-                        <li><a href="https://www.coursera.org/account/accomplishments/records/A9GH5HQ6LJC6" target="_blank">Credential URL</a></li>
-                    </ul>
-                </div>
-                <div class="certification-card">
-                    <img src="certImages/cert11.jpg"/>
-                    <ul class="cert-description">  
-                        <li>Name: Application Development using Microservices and Serverless</li>
-                        <li>Issuing Organization: IBM</li>
-                        <li>Issue Date: February 2024</li>
-                        <li>Credential ID: R5XG6M9Q7X9C</li>
-                        <li><a href="https://www.coursera.org/account/accomplishments/records/R5XG6M9Q7X9C" target="_blank">Credential URL</a></li>
-                    </ul>
-                </div>
-                <div class="certification-card">
-                    <img src="certImages/cert12.jpg"/>
-                    <ul class="cert-description">  
-                        <li>Name: Full Stack Application Development Capstone Project</li>
-                        <li>Issuing Organization: IBM</li>
-                        <li>Issue Date: February 2024</li>
-                        <li>Credential ID: GVSYJ9FMWHVH</li>
-                        <li><a href="https://www.coursera.org/account/accomplishments/records/GVSYJ9FMWHVH" target="_blank">Credential URL</a></li>
-                    </ul>
-                </div>
-                <div class="certification-card">
-                    <img src="certImages/cert13.jpg"/>
-                    <ul class="cert-description">  
-                        <li>Name: Full Stack Software Developer Assessment</li>
-                        <li>Issuing Organization: IBM</li>
-                        <li>Issue Date: February 2024</li>
-                        <li>Credential ID: 9875LKBHXH49</li>
-                        <li><a href="https://www.coursera.org/account/accomplishments/records/9875LKBHXH49" target="_blank">Credential URL</a></li>
-                    </ul>
-                </div>
-            </div>
-            <!--end of image slider for certificates-->
+        <div>
+          <i class="fa-solid fa-envelope" style="color: whitesmoke"></i>
+          <span>nicholas.osorio98@gmail.com</span>
         </div>
-        <!--end of certifications-->
-
-        <!--skills-->
-        <div id="skills">
-            <h1>Skills</h1>
-            <div class="skills-container">
-                <div class="skill-card">
-                    <i class="fa-brands fa-html5 fa-2xl" style="color: whitesmoke;"></i>
-                    <div>HTML5</div>
-                    <hr>
-                    <span>Advanced</span>
-                </div>
-                <div class="skill-card">
-                    <i class="fa-brands fa-css3-alt fa-2xl" style="color: whitesmoke;"></i>
-                    <div>CSS3</div>
-                    <hr>
-                    <span>Advanced</span>
-                </div>
-                <div class="skill-card">
-                    <i class="fa-brands fa-bootstrap fa-2xl" style="color: whitesmoke;"></i>
-                    <div>Bootstrap 3</div>
-                    <hr>
-                    <span>Intermediate</span>
-                </div>
-                <div class="skill-card">
-                    <i class="fa-brands fa-square-js fa-2xl" style="color: whitesmoke;"></i>
-                    <div>JavaScript</div>
-                    <hr>
-                    <span>Advanced</span>
-                </div>
-                <div class="skill-card">
-                    <i class="fa-solid fa-tablet-screen-button fa-2xl" style="color: whitesmoke;"></i>
-                    <div>Responsive Design</div>
-                    <hr>
-                    <span>Intermediate</span>
-                </div>
-            </div>
-            <div class="skills-container">
-                <div class="skill-card">
-                    <i class="fa-brands fa-react fa-2xl" style="color: whitesmoke;"></i>
-                    <div>React JS</div>
-                    <hr>
-                    <span>Novice</span>
-                </div>
-                <div class="skill-card">
-                    <i class="fa-brands fa-node-js fa-2xl" style="color: whitesmoke;"></i>
-                    <div>Node.JS/Express</div>
-                    <hr>
-                    <span>Novice</span>
-                </div>
-                <div class="skill-card">
-                    <i class="fa-brands fa-docker fa-2xl" style="color: whitesmoke;"></i>
-                    <div>Docker</div>
-                    <hr>
-                    <span>Novice</span>
-                </div>
-                <div class="skill-card">
-                    <i class="fa-brands fa-git-alt fa-2xl" style="color: whitesmoke;"></i>
-                    <div>Git</div>
-                    <hr>
-                    <span>Intermediate</span>
-                </div>
-                <div class="skill-card">
-                    <i class="fa-brands fa-github fa-2xl" style="color: whitesmoke;"></i>
-                    <div>GitHub</div>
-                    <hr>
-                    <span>Intermediate</span>
-                </div>
-            </div>
-            <div class="skills-container">
-                <div class="skill-card">
-                    <!-- <iconify-icon id="cpp-icon" icon="nonicons:c-plusplus-16" style="color: whitesmoke;" width="24" height="22"></iconify-icon> -->
-                    <img id="cpp-icon" src="cpp.png">
-                    <div>C++</div>
-                    <hr>
-                    <span>Intermediate</span>
-                </div>
-                <div class="skill-card">
-                    <i class="fa-brands fa-java fa-2xl" style="color: whitesmoke;"></i>
-                    <div>Java</div>
-                    <hr>
-                    <span>Advanced</span>
-                </div>
-                <div class="skill-card">
-                    <i class="fa-brands fa-android fa-2xl" style="color: whitesmoke;"></i>
-                    <div id="goto-projects">Kotlin</div>
-                    <hr>
-                    <span>Novice</span>
-                </div>
-                <div class="skill-card">
-                    <i class="fa-brands fa-python fa-2xl" style="color: whitesmoke;"></i>
-                    <div>Python/Flask/Django</div>
-                    <hr>
-                    <span>Intermediate</span>
-                </div>
-                <div class="skill-card">
-                    <i class="fa-solid fa-code fa-2xl" style="color: whitesmoke;"></i>
-                    <div>OOP</div>
-                    <hr>
-                    <span>Advanced</span>
-                </div>
-            </div>
+        <div>
+          <a
+            href="https://www.linkedin.com/in/nicholas-osorio-b74888229/"
+            target="_blank"
+          >
+            <i class="fa-brands fa-linkedin" style="color: whitesmoke"></i>
+            <span>Connect with me on LinkedIn!</span>
+          </a>
         </div>
-        <!--end of skills-->
-
-        <!--projects-->
-        <div id="projects">
-            <h1>Projects</h1>
-            <h2>Introductory Guide for Newhires</h2>
-            <div class="project-container"> 
-                <a href="https://www.fs1inc.com/" class="project-img" target="_blank">
-                    <img src="projectImages/project1.PNG">
-                </a>
-                <ul class="project-description">
-                    <li>Contributed to the development of a web-based guide for my former employer.</li>
-                    <li>Privately developed a web page containing company information and practices used to train new employees.</li>
-                    <li>Developed this guide using HTML and CSS, authored all explanations, and provided illustrations to accompany employee procedures for respective department.</li>
-                    <li>Contained multiple pages; each page discussed different topics/aspects of the employee's tasks and went into careful details about how to proceed in different scenarios.</li>
-                </ul>
-            </div>
-            <hr>
-            <h2>Landing Page for Cafe</h2>
-            <div class="project-container"> 
-                <a href="https://gowqc.github.io/mockup-cafe-landing-page/cafe-joyora/cafe.html" class="project-img" target="_blank">
-                    <img src="projectImages/project2.PNG">
-                </a>
-                <ul class="project-description">
-                    <li>Developed and designed a landing page for a start-up bakery using HTML5, CSS and JavaScript.</li>
-                    <li>Fixed sidebar allows for traversal to different sections of the web page, access to an interactive Google map, and contains links to respective social media platforms.</li>
-                    <li>The web page's menu can display three different categories for customers to select from; all items possess unique prices that can be added to the user's cart to simulate purchases.</li>
-                    <li>Utilizes alerts for cart interactions and animations when swapping menu categories or scrolling through news articles. </li>
-                    <li>Accounts for responsive design principles to allow users of various devices (from  320px to 1800px) to view the web page.</li>
-                </ul>
-            </div>
-            <hr>
-            <h2>Sobro Coffee Table Price Scraper/Tracker</h2>
-            <div class="project-container"> 
-                <a href="https://gowqc.github.io/sobro-price-tracker/" class="project-img" target="_blank">
-                    <img src="projectImages/project3.PNG">
-                </a>
-                <ul class="project-description">
-                    <li>Developed a web scraper using HTML, CSS, JavaScript, Express.js, and Nightmare.js.</li>
-                    <li>Allows the user to press buttons for respective commerce websites and scrape the live price of those domains via Nightmare - a high-level browser automation library.</li>
-                    <li>Nightmare functionality must be executed on a backend server, so in order to properly use this application, the server.js file must be run locally (currently looking into hosting services to prevent the need for this).</li>
-                    <li>Application will allow the user to compare different seller prices, allowing them to determine which seller has the best price currently available.</li>
-                    <li>Second functionality is a work in progress, which will simulate allowing users to register via email address for updates regarding price drops of the product.</li>
-                </ul>
-            </div>
-            <hr>
-            <h2>React Pokédex</h2>
-            <div class="project-container"> 
-                <div class="project-img">
-                    <a href="https://gowqc.github.io/react-pokedex/" class="project-img" target="_blank">
-                        <img src="projectImages/project4.png">
-                    </a>
-                </div>
-                <ul class="project-description">
-                    <li>Developed a National Pokédex containing the Pokédex of all regions using React, an API called PokeAPI, and CSS.</li>
-                    <li>A "Pokédex" is essentially an encyclopedia used for documenting the imaginary creatures of the popular Pokémon games published by Nintendo. This Pokédex contains a listing for each and every Pokémon to ever exist.</li>
-                    <li>Grants access to data sourced from the API in an easy-to-read user interface and allows for easy transitions between the different regional Pokédex's.</li>
-                    <li>Utilizes hooks such as useEffect and useState to effectively enable the transtitioning of pages and the flow of data between different React components.</li>
-                    <li>Can be used as a useful tool for anyone who enjoys playing the Pokémon games as it's a good way of searching for: a Pokémon's regional origins, a Pokémon's typing (which relates to how they battle in game), or even a Pokémon's cry.</li>
-                </ul>
-            </div>
-            <hr>
+        <div>
+          <a href="https://github.com/gowQC?tab=repositories" target="_blank">
+            <i class="fa-brands fa-github" style="color: whitesmoke"></i>
+            <span>Check out my GitHub repositories!</span>
+          </a>
         </div>
-        <!--end of projects https://gowqc.github.io/react-pokedex/-->
-    </body>
+      </div>
+      <!--35% of navbar on right-->
+      <ul class="navRight">
+        <li><a href="#goto-about-me">About Me</a></li>
+        <li><a href="#goto-certifications">Certifications</a></li>
+        <li><a href="#goto-skills">Skills</a></li>
+        <li><a href="#goto-projects">Projects</a></li>
+      </ul>
+    </nav>
+    <!--end of full navbar-->
+
+    <!--about me-->
+    <div id="about-me">
+      <h1>About Me</h1>
+      <div class="about-me-container">
+        <img src="myProfilePicture.png" class="about-me-img" />
+        <div class="vl"></div>
+        <div class="description">
+          <h2>Hello! My name is Nicholas Osorio!</h2>
+          <p>
+            I'm a full stack web developer that is looking for work in front
+            end, back end, or full stack development. I've acquired my
+            professional certification for full stack software development from
+            IBM, and I recently furthered my education by completing Per
+            Scholas' rigorous software engineering training for MERN stack
+            technologies.
+          </p>
+          <p>
+            Ever since I was enrolled in 2016 at CUNY Queens College, I have
+            been learning about a variety of topics in computer science. It only
+            took one C++ class for me to fall in love with programming; despite
+            pursuing a major in anthropology back then, I have now fully
+            transitioned my efforts and interests into all topics related to
+            computer science, with an affinity for web development. In my free
+            time, I study whatever I can to adapt to new technologies and learn
+            more about programming.
+          </p>
+          <p>
+            I would like to thank you for viewing my portfolio! Projects are
+            always being updated - and as a newcomer in the field, things on
+            this page will take time to perfect - but I would still like to
+            display my experience and capabilities at this stage of my career!
+          </p>
+          <h2 id="goto-certifications">My Education</h2>
+          <ul>
+            <li>
+              Bachelor of Arts - BA, Anthropology w/ Minor in Computer Science
+              (Aug 2016 - Jan 2021)
+            </li>
+            <li>
+              IBM Full Stack Software Developer Specialization (July 2023 -
+              February 2024)
+            </li>
+            <li>
+              Per Scholas Software Engineer MERN Stack Training (September 2024
+              - January 2025)
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!--end of about me-->
+
+    <!--certifications-->
+    <div id="certifications">
+      <h1>Certifications</h1>
+      <!-- <div class="certification-card">
+        <img id="professional-cert" src="certImages/profCert.jpg" />
+        <ul id="professional-cert-description">
+          <li>Name: Software Engineering</li>
+          <li>Issuing Organization: Per Scholas</li>
+          <li>Issue Date: January 24th, 2025</li>
+        </ul>
+      </div> -->
+      <div class="certification-card">
+        <img id="professional-cert" src="certImages/profCert.jpg" />
+        <ul id="professional-cert-description">
+          <li>Name: IBM Full Stack Software Developer</li>
+          <li>Issuing Organization: IBM</li>
+          <li>Issue Date: February 25th, 2024</li>
+          <li>Credential ID: Q2H68P96J33D</li>
+          <li>
+            <a
+              href="https://coursera.org/share/80a4606ec674a3f43e97e37686aa8440"
+              target="_blank"
+              >Credential URL</a
+            >
+          </li>
+        </ul>
+      </div>
+      <h2>Supporting Certifications</h2>
+      <!--image slider for certificates-->
+      <div class="certifications-slider">
+        <div class="certification-card">
+          <img src="certImages/cert1.jpg" />
+          <ul class="cert-description">
+            <li>Name: HTML, CSS, and Javascript for Web Developers</li>
+            <li>Issuing Organization: John Hopkins University</li>
+            <li>Issue Date: August 2023</li>
+            <li>Credential ID: JEXWJWAH6L75</li>
+            <li>
+              <a
+                href="https://coursera.org/share/25603bcfb3111c38fe729c6dca3cab00"
+                target="_blank"
+                >Credential URL</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="certification-card">
+          <img src="certImages/cert2.jpg" />
+          <ul class="cert-description">
+            <li>
+              Name: Introduction to Web Development with HTML, CSS, JavaScript
+            </li>
+            <li>Issuing Organization: IBM</li>
+            <li>Issue Date: September 2023</li>
+            <li>Credential ID: UMUVN8WKX4DW</li>
+            <li>
+              <a
+                href="https://coursera.org/share/0508f6fa8a6d9da99e85ff1b48128e7b"
+                target="_blank"
+                >Credential URL</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="certification-card">
+          <img src="certImages/cert3.jpg" />
+          <ul class="cert-description">
+            <li>Name: Getting Started with Git and GitHub</li>
+            <li>Issuing Organization: IBM</li>
+            <li>Issue Date: September 2023</li>
+            <li>Credential ID: CEA3C8RJ29XL</li>
+            <li>
+              <a
+                href="https://coursera.org/share/9c02e62e4fd6924b46618a4133c7dbda"
+                target="_blank"
+                >Credential URL</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="certification-card">
+          <img src="certImages/cert4.jpg" />
+          <ul class="cert-description">
+            <li>Name: Introduction to Cloud Computing</li>
+            <li>Issuing Organization: IBM</li>
+            <li>Issue Date: September 2023</li>
+            <li>Credential ID: JPQ7GESNDTZD</li>
+            <li>
+              <a
+                href="https://coursera.org/share/0004abc395e3dc1f8675e9a7effaccbb"
+                target="_blank"
+                >Credential URL</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="certification-card">
+          <img src="certImages/cert5.jpg" />
+          <ul class="cert-description">
+            <li>Name: Python for Data Science, AI & Development</li>
+            <li>Issuing Organization: IBM</li>
+            <li>Issue Date: October 2023</li>
+            <li>Credential ID: DWSDLYANZWKW</li>
+            <li>
+              <a
+                href="https://coursera.org/share/46993b33420f7728c88d45cd09698c32"
+                target="_blank"
+                >Credential URL</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="certification-card">
+          <img src="certImages/cert6.jpg" />
+          <ul class="cert-description">
+            <li>Name: Developing Front-End Apps with React</li>
+            <li>Issuing Organization: IBM</li>
+            <li>Issue Date: November 2023</li>
+            <li>Credential ID: 6NX73KGBAZUX</li>
+            <li>
+              <a
+                href="https://coursera.org/share/2cd14fddc138e97afd8795061225bff8"
+                target="_blank"
+                >Credential URL</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="certification-card">
+          <img src="certImages/cert7.jpg" />
+          <ul class="cert-description">
+            <li>Name: Developing Back-End Apps with Node.js and Express</li>
+            <li>Issuing Organization: IBM</li>
+            <li>Issue Date: January 2024</li>
+            <li>Credential ID: RA2LEMPMQQ2N</li>
+            <li>
+              <a
+                href="https://www.coursera.org/account/accomplishments/records/RA2LEMPMQQ2N"
+                target="_blank"
+                >Credential URL</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="certification-card">
+          <img src="certImages/cert8.jpg" />
+          <ul class="cert-description">
+            <li>Name: Developing AI Applications with Python and Flask</li>
+            <li>Issuing Organization: IBM</li>
+            <li>Issue Date: January 2024</li>
+            <li>Credential ID: ZL2N3TN2ZWST</li>
+            <li>
+              <a
+                href="https://www.coursera.org/account/accomplishments/records/ZL2N3TN2ZWST"
+                target="_blank"
+                >Credential URL</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="certification-card">
+          <img src="certImages/cert9.jpg" />
+          <ul class="cert-description">
+            <li>Name: Django Application Development with SQL and Databases</li>
+            <li>Issuing Organization: IBM</li>
+            <li>Issue Date: January 2024</li>
+            <li>Credential ID: XZ28B4XC674F</li>
+            <li>
+              <a
+                href="https://www.coursera.org/account/accomplishments/records/XZ28B4XC674F"
+                target="_blank"
+                >Credential URL</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="certification-card">
+          <img src="certImages/cert10.jpg" />
+          <ul class="cert-description" id="goto-skills">
+            <li>
+              Name: Introduction to Containers w/ Docker, Kubernetes & OpenShift
+            </li>
+            <li>Issuing Organization: IBM</li>
+            <li>Issue Date: February 2024</li>
+            <li>Credential ID: A9GH5HQ6LJC6</li>
+            <li>
+              <a
+                href="https://www.coursera.org/account/accomplishments/records/A9GH5HQ6LJC6"
+                target="_blank"
+                >Credential URL</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="certification-card">
+          <img src="certImages/cert11.jpg" />
+          <ul class="cert-description">
+            <li>
+              Name: Application Development using Microservices and Serverless
+            </li>
+            <li>Issuing Organization: IBM</li>
+            <li>Issue Date: February 2024</li>
+            <li>Credential ID: R5XG6M9Q7X9C</li>
+            <li>
+              <a
+                href="https://www.coursera.org/account/accomplishments/records/R5XG6M9Q7X9C"
+                target="_blank"
+                >Credential URL</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="certification-card">
+          <img src="certImages/cert12.jpg" />
+          <ul class="cert-description">
+            <li>Name: Full Stack Application Development Capstone Project</li>
+            <li>Issuing Organization: IBM</li>
+            <li>Issue Date: February 2024</li>
+            <li>Credential ID: GVSYJ9FMWHVH</li>
+            <li>
+              <a
+                href="https://www.coursera.org/account/accomplishments/records/GVSYJ9FMWHVH"
+                target="_blank"
+                >Credential URL</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="certification-card">
+          <img src="certImages/cert13.jpg" />
+          <ul class="cert-description">
+            <li>Name: Full Stack Software Developer Assessment</li>
+            <li>Issuing Organization: IBM</li>
+            <li>Issue Date: February 2024</li>
+            <li>Credential ID: 9875LKBHXH49</li>
+            <li>
+              <a
+                href="https://www.coursera.org/account/accomplishments/records/9875LKBHXH49"
+                target="_blank"
+                >Credential URL</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!--end of image slider for certificates-->
+    </div>
+    <!--end of certifications-->
+
+    <!--skills-->
+    <div id="skills">
+      <h1>Skills</h1>
+      <div class="skills-container">
+        <div class="skill-card">
+          <i class="fa-brands fa-html5 fa-2xl" style="color: whitesmoke"></i>
+          <div>HTML5</div>
+          <hr />
+          <span>Advanced</span>
+        </div>
+        <div class="skill-card">
+          <i class="fa-brands fa-css3-alt fa-2xl" style="color: whitesmoke"></i>
+          <div>CSS3</div>
+          <hr />
+          <span>Advanced</span>
+        </div>
+        <div class="skill-card">
+          <i
+            class="fa-brands fa-bootstrap fa-2xl"
+            style="color: whitesmoke"
+          ></i>
+          <div>Bootstrap 3</div>
+          <hr />
+          <span>Intermediate</span>
+        </div>
+        <div class="skill-card">
+          <i
+            class="fa-brands fa-square-js fa-2xl"
+            style="color: whitesmoke"
+          ></i>
+          <div>JavaScript</div>
+          <hr />
+          <span>Advanced</span>
+        </div>
+        <div class="skill-card">
+          <i
+            class="fa-solid fa-tablet-screen-button fa-2xl"
+            style="color: whitesmoke"
+          ></i>
+          <div>Responsive Design</div>
+          <hr />
+          <span>Intermediate</span>
+        </div>
+      </div>
+      <div class="skills-container">
+        <div class="skill-card">
+          <i class="fa-brands fa-react fa-2xl" style="color: whitesmoke"></i>
+          <div>React JS</div>
+          <hr />
+          <span>Advanced</span>
+        </div>
+        <div class="skill-card">
+          <i class="fa-brands fa-node-js fa-2xl" style="color: whitesmoke"></i>
+          <div>Node.js/Express</div>
+          <hr />
+          <span>Advanced</span>
+        </div>
+        <div class="skill-card">
+          <i class="fa-brands fa-docker fa-2xl" style="color: whitesmoke"></i>
+          <div>Docker</div>
+          <hr />
+          <span>Novice</span>
+        </div>
+        <div class="skill-card">
+          <i class="fa-brands fa-git-alt fa-2xl" style="color: whitesmoke"></i>
+          <div>Git</div>
+          <hr />
+          <span>Intermediate</span>
+        </div>
+        <div class="skill-card">
+          <i class="fa-brands fa-github fa-2xl" style="color: whitesmoke"></i>
+          <div>GitHub</div>
+          <hr />
+          <span>Intermediate</span>
+        </div>
+      </div>
+      <div class="skills-container">
+        <div class="skill-card">
+          <!-- <iconify-icon id="cpp-icon" icon="nonicons:c-plusplus-16" style="color: whitesmoke;" width="24" height="22"></iconify-icon> -->
+          <img id="cpp-icon" src="cpp.png" />
+          <div>C++</div>
+          <hr />
+          <span>Intermediate</span>
+        </div>
+        <div class="skill-card">
+          <i class="fa-brands fa-java fa-2xl" style="color: whitesmoke"></i>
+          <div>Java</div>
+          <hr />
+          <span>Intermediate</span>
+        </div>
+        <div class="skill-card">
+          <i class="fa-brands fa-android fa-2xl" style="color: whitesmoke"></i>
+          <div id="goto-projects">Kotlin</div>
+          <hr />
+          <span>Novice</span>
+        </div>
+        <div class="skill-card">
+          <i class="fa-brands fa-python fa-2xl" style="color: whitesmoke"></i>
+          <div>Python/Flask/Django</div>
+          <hr />
+          <span>Intermediate</span>
+        </div>
+        <div class="skill-card">
+          <i class="fa-solid fa-code fa-2xl" style="color: whitesmoke"></i>
+          <div>OOP</div>
+          <hr />
+          <span>Advanced</span>
+        </div>
+      </div>
+    </div>
+    <!--end of skills-->
+
+    <!--projects-->
+    <div id="projects">
+      <h1>Projects</h1>
+      <h2>MERN Stack E-commerce Website</h2>
+      <div class="project-container">
+        <div class="project-img">
+          <a
+            href="https://glowing-sunflower-61048c.netlify.app/"
+            class="project-img"
+            target="_blank"
+          >
+            <img src="projectImages/project5.png" />
+          </a>
+        </div>
+        <ul class="project-description">
+          <li>Developed an e-commerce website with a MERN tech stack.</li>
+          <li>
+            Full stack application that simulates the likes of an actual
+            e-commerce website, enabling various functionality throughout the
+            site.
+          </li>
+          <li>
+            Frontend populated with store products fetched from a database using
+            a RESTful API. API created to have full CRUD functionality.
+          </li>
+          <li>
+            Allows for user account creation and deletion. Website makes sure
+            user password data is encrypted before it is either saved into the
+            database or confirmed for logins and account deletions, allowing for
+            proper password authentication.
+          </li>
+          <li>
+            Logged in users are able to place items in their virtual cart and
+            send order data to a MongoDB database. Future implementations are in
+            the works for retrieving such data and displaying it for the user in
+            the user's profile page.
+          </li>
+        </ul>
+      </div>
+      <hr />
+      <h2>React Pokédex</h2>
+      <div class="project-container">
+        <div class="project-img">
+          <a
+            href="https://gowqc.github.io/react-pokedex/"
+            class="project-img"
+            target="_blank"
+          >
+            <img src="projectImages/project4.png" />
+          </a>
+        </div>
+        <ul class="project-description">
+          <li>
+            Developed a National Pokédex containing the Pokédex of all regions
+            using React, an API called PokeAPI, and CSS.
+          </li>
+          <li>
+            A "Pokédex" is essentially an encyclopedia used for documenting the
+            imaginary creatures of the popular Pokémon games published by
+            Nintendo. This Pokédex contains a listing for each and every Pokémon
+            to ever exist.
+          </li>
+          <li>
+            Grants access to data sourced from the API in an easy-to-read user
+            interface and allows for easy transitions between the different
+            regional Pokédex's.
+          </li>
+          <li>
+            Utilizes hooks such as useEffect and useState to effectively enable
+            the transtitioning of pages and the flow of data between different
+            React components.
+          </li>
+          <li>
+            Can be used as a useful tool for anyone who enjoys playing the
+            Pokémon games as it's a good way of searching for: a Pokémon's
+            regional origins, a Pokémon's typing (which relates to how they
+            battle in game), or even a Pokémon's cry.
+          </li>
+        </ul>
+      </div>
+      <hr />
+      <h2>Café Landing Page</h2>
+      <div class="project-container">
+        <a
+          href="https://gowqc.github.io/mockup-cafe-landing-page/cafe-joyora/cafe.html"
+          class="project-img"
+          target="_blank"
+        >
+          <img src="projectImages/project2.PNG" />
+        </a>
+        <ul class="project-description">
+          <li>
+            Developed and designed a landing page for a start-up bakery using
+            HTML5, CSS and JavaScript.
+          </li>
+          <li>
+            Fixed sidebar allows for traversal to different sections of the web
+            page, access to an interactive Google map, and contains links to
+            respective social media platforms.
+          </li>
+          <li>
+            The web page's menu can display three different categories for
+            customers to select from; all items possess unique prices that can
+            be added to the user's cart to simulate purchases.
+          </li>
+          <li>
+            Utilizes alerts for cart interactions and animations when swapping
+            menu categories or scrolling through news articles.
+          </li>
+          <li>
+            Accounts for responsive design principles to allow users of various
+            devices (from 320px to 1800px) to view the web page.
+          </li>
+        </ul>
+      </div>
+      <hr />
+      <h2>Price Scraper/Tracker</h2>
+      <div class="project-container">
+        <a
+          href="https://gowqc.github.io/sobro-price-tracker/"
+          class="project-img"
+          target="_blank"
+        >
+          <img src="projectImages/project3.PNG" />
+        </a>
+        <ul class="project-description">
+          <li>
+            Developed a web scraper using HTML, CSS, JavaScript, Express.js, and
+            Nightmare.js.
+          </li>
+          <li>
+            Allows the user to press buttons for respective commerce websites
+            and scrape the live price of those domains via Nightmare - a
+            high-level browser automation library.
+          </li>
+          <li>
+            Nightmare functionality must be executed on a backend server, so in
+            order to properly use this application, the server.js file must
+            currently be run locally. Looking into updating the code for the
+            backend and planning proper deployment of the backend for live
+            demonstrations.
+          </li>
+          <li>
+            Application will allow the user to compare different seller prices,
+            allowing them to determine which seller has the best price currently
+            available.
+          </li>
+          <li>
+            Second functionality is a work in progress, which will simulate
+            allowing users to register via email address for updates regarding
+            price drops of the product.
+          </li>
+        </ul>
+      </div>
+      <hr />
+      <h2>Introductory Guide for Newhires</h2>
+      <div class="project-container">
+        <a href="https://www.fs1inc.com/" class="project-img" target="_blank">
+          <img src="projectImages/project1.PNG" />
+        </a>
+        <ul class="project-description">
+          <li>
+            Contributed to the development of a web-based guide for my former
+            employer.
+          </li>
+          <li>
+            Privately developed a web page containing company information and
+            practices used to train new employees.
+          </li>
+          <li>
+            Developed this guide using HTML and CSS, authored all explanations,
+            and provided illustrations to accompany employee procedures for
+            respective department.
+          </li>
+          <li>
+            Contained multiple pages; each page discussed different
+            topics/aspects of the employee's tasks and went into careful details
+            about how to proceed in different scenarios.
+          </li>
+        </ul>
+      </div>
+      <hr />
+    </div>
+    <!--end of projects https://gowqc.github.io/react-pokedex/-->
+  </body>
 </html>
